@@ -1,10 +1,11 @@
-import 'modern-normalize/modern-normalize.css';
 import { useState } from 'react';
-import s from './feedback.module.css';
+
 import FeedbackActions from './FeedbackActions/FeedbackActions';
 import FeedbackStats from './FeedbackStats/FeedbackStats';
 import SectionTitle from './Section/SectionTitle';
 import Notification from './Notification/Notification';
+
+import s from './feedback.module.css';
 
 const App = () => {
   const [feedback, setFeedback] = useState({
@@ -26,7 +27,8 @@ const App = () => {
     const { good, neutral, bad } = feedback;
     return good + neutral + bad;
   };
-  console.log('countTotalFeedback: ', countTotalFeedback());
+
+
 
   const countPositiveFeedbackPercentage = () => {
     const { good } = feedback;
